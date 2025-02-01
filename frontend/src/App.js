@@ -6,23 +6,6 @@ import SearchBar from "./SearchBar";
 import "./SearchBar.css";
 
 const App = () => {
-  const [searchQuery, setSearchQuery] = useState("");
-
-  const handleSearch = (query) => {
-      setSearchQuery(query);
-      console.log("Searching for:", query);
-  };
-
-  return (
-      <div>
-          <h1>Game Search Engine</h1>
-          <SearchBar onSearch={handleSearch} />
-          <p>Search term: {searchQuery}</p>
-      </div>
-  );
-};
-
-const App = () => {
     const [searchQuery, setSearchQuery] = useState("");
 
     const handleSearch = (query) => {
