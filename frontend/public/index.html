@@ -1,6 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<!--Styles.css (handles how the search bar looks)-->
+<link rel="stylesheet" href="styles.css">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game Search Bar</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="search-container">
+      <input type="text" id="searchBar" placeholder="Search for a game..." autocomplete="off">
+      <div id="searchResults"></div>
+  </div>
+
+  <script type="module" src="src/searchBar.js"></script>
+
+</body>
+</html>
+
+
+
+<head>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
