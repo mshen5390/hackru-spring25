@@ -1,6 +1,6 @@
-import logo from './logo.svg';
 import './App.css';
 import Filter from '.Filter';
+import { useState } from 'react';
 
 function App() {
   const [selectedGenres, setSelectedGenres] = useState([]);
