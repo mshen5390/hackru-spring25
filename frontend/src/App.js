@@ -1,6 +1,5 @@
 import './App.css';
 import Filter from './features/filter';
-import { useState } from 'react';
 //Searchbar
 import React, { useState } from "react";
 import SearchBar from "./SearchBar";
