@@ -2,7 +2,7 @@ import './App.css';
 import Filter from './features/filter';
 import React, { useState } from "react";
 import SearchBar from "./features/searchBar";
-import ".searchBar.css";
+import "./searchBar.css";
 
 const App = () => {
     const [searchQuery, setSearchQuery] = useState("");
