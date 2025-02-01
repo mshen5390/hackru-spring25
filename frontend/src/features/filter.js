@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 
 function Filter() {
-    const [selectedFilters, setSelectedFilters] = useState([]);
-}
+  const [selectedFilters, setSelectedFilters] = useState([]);
 
-const handleCheckboxChange = (event) => {
+  const handleCheckboxChange = (event) => {
     const { value, checked } = event.target;
   
     if (checked) {
@@ -20,7 +19,7 @@ const handleCheckboxChange = (event) => {
     <div>
       <h3>Filter Games by Genre</h3>
       
-      {/* Step 2: Create checkboxes for different filters */}
+      {/* Create checkboxes for different filters */}
       <label>
         <input
           type="checkbox"
@@ -46,7 +45,7 @@ const handleCheckboxChange = (event) => {
         RPG
       </label>
 
-      {/* Step 4: Display selected filters */}
+      {/* Display selected filters */}
       <div>
         <p>Selected Filters:</p>
         <ul>
@@ -57,5 +56,6 @@ const handleCheckboxChange = (event) => {
       </div>
     </div>
   );
+}
 
-  export default Filter;
+export default Filter;
