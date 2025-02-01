@@ -1,5 +1,5 @@
 import './App.css';
-import Filter from '.Filter';
+import Filter from './features/filter';
 import { useState } from 'react';
 
 function App() {
