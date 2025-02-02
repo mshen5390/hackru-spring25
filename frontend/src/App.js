@@ -1,5 +1,4 @@
 import './App.css';
-import Filter from './features/filter';
 import React, { useState, useEffect } from "react";
 import SearchBar from "./features/searchBar";
 import "./searchBar.css";
@@ -117,9 +116,6 @@ const App = () => {
               {/* Button to load more games */}
               <button onClick={() => setDisplayLimit(displayLimit + 10)}>Show More</button>
             </div>
-          
-            {/* Filter component */}
-            <Filter selectedGenres={selectedGenres} setSelectedGenres={setSelectedGenres} />
         </div>
       </Router>
     );
