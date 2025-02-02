@@ -43,15 +43,23 @@ const App = () => {
     }, []);
 
     useEffect(() => {
+      console.log('Modal opened:', isModalOpen);
+      console.log('Genres:', genres);
       if (isModalOpen) {
-        fetch('/backend/genres.json') // Ensure genres.json is in the public folder
-          .then((response) => response.json())
-          .then((data) => {
-            setGenres(data); // Set genres to state when fetched
-          })
-          .catch((error) => {
-            console.error('Error fetching genres:', error);
-          });
+        fetch('/genres.json') // Ensure genres.json is in the public folder
+        .then((response) => {
+          console.log('Response:', response); // Log the response
+          if (!response.ok) {
+            throw new Error('Network response was not ok');
+          }
+          return response.json();
+        })
+        .then((data) => {
+          setGenres(data); // Set genres to state when fetched
+        })
+        .catch((error) => {
+          console.error('Error fetching genres:', error);
+        });
       }
     }, [isModalOpen]);
 
