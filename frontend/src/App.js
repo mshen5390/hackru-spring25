@@ -32,7 +32,8 @@ const App = () => {
         try {
           const response = await fetch('http://localhost:2225/api/games'); // Request to serverless function
           const data = await response.json();
-          console.log('Full API Response:', data);
+          console.log(response);
+          //console.log('Full API Response:', data);
           setGames(data);
         } catch (error) {
           console.error('Error fetching game data:', error);
@@ -55,6 +56,7 @@ const App = () => {
           return response.json();
         })
         .then((data) => {
+          console.log("Fetched genres:", data);
           setGenres(data); // Set genres to state when fetched
         })
         .catch((error) => {

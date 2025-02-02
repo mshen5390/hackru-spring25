@@ -22,6 +22,7 @@ const getGenres = async (genres) => {
     const sortedGenres = response.data.results.sort((a, b) => 
       a.name.localeCompare(b.name) // Sorts in ascending order (A-Z)
     );
+    console.log('hi');
     fs.writeFileSync('genres.json', JSON.stringify(response.data.results, null, 2));
 
     //console.log('Genres saved to genres.json');

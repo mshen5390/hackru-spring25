@@ -1,8 +1,8 @@
 
 import React, { useState, useEffect } from "react";
 
-function Modal({ isOpen, onClose, genre, onSelectFilters }) {
-  const [genres, setGenres] = useState([]);
+function Modal({ isOpen, onClose, genres, onSelectFilters }) {
+  //const [genres, setGenres] = useState([]);
 
   
 
