@@ -1,202 +1,152 @@
 [
   {
-    "deck": "The \"action\" genre serves as a catch-all for many games from the 1970s and 1980s, before gaming diversified into distinct sub-genres.",
     "name": "Action"
   },
   {
-    "deck": "Action-adventure games are often noted by the presence of expansive worlds, character building, and puzzle-solving while still requiring you to run, shoot, or fight like an action game.",
     "name": "Action-Adventure"
   },
   {
-    "deck": "Adventure games often don't run in real-time and focus primarily on puzzle-solving over manual dexterity.",
     "name": "Adventure"
   },
   {
-    "deck": "Traditionally known as \"America's Pastime,\" baseball has been converted into video game form for years.",
     "name": "Baseball"
   },
   {
-    "deck": null,
     "name": "Basketball"
   },
   {
-    "deck": null,
     "name": "Billiards"
   },
   {
-    "deck": "Block-breaking started with Breakout, a single-player iteration on the multiplayer classic, Pong.",
     "name": "Block-Breaking"
   },
   {
-    "deck": null,
     "name": "Bowling"
   },
   {
-    "deck": null,
     "name": "Boxing"
   },
   {
-    "deck": "Sometimes called \"walk-and-punch\" or \"beat-'em-up,\" the brawler genre covers side-scrolling melee combat games like Double Dragon, Final Fight, and Streets of Rage.",
     "name": "Brawler"
   },
   {
-    "deck": null,
     "name": "Card Game"
   },
   {
-    "deck": null,
     "name": "Compilation"
   },
   {
-    "deck": null,
     "name": "Cricket"
   },
   {
-    "deck": "Whether you're running on-foot or driving an exotic super-car, Driving/Racing is all about getting from one place to another, usually as quickly as possible.",
     "name": "Driving/Racing"
   },
   {
-    "deck": "Popularized early-on by games like Robotron: 2084, the \"one stick moves, one stick shoots\" genre saw a surge in interest as consoles became able to run smaller, downloadable games.",
     "name": "Dual-Joystick Shooter"
   },
   {
-    "deck": null,
     "name": "Educational"
   },
   {
-    "deck": "Though earlier examples certainly exist, the fighting genre really broke out on its own with the release of Capcom's Street Fighter II.",
     "name": "Fighting"
   },
   {
-    "deck": "Since the genre was popularized by Wolfenstein 3D, first-person shooting has served as a primary genre for close to 20 years.",
     "name": "First-Person Shooter"
   },
   {
-    "deck": null,
     "name": "Fishing"
   },
   {
-    "deck": null,
     "name": "Fitness"
   },
   {
-    "deck": null,
     "name": "Flight Simulator"
   },
   {
-    "deck": "From handheld Mattel toys to the latest Madden-endorsed extravaganza, American football has been a favorite for sports game developers for decades.",
     "name": "Football"
   },
   {
-    "deck": "Games like poker, slot machines, and pachinko that attempt to virtually simulate the act of throwing money into a toilet.",
     "name": "Gambling"
   },
   {
-    "deck": null,
     "name": "Golf"
   },
   {
-    "deck": null,
     "name": "Hockey"
   },
   {
-    "deck": null,
     "name": "Light-Gun Shooter"
   },
   {
-    "deck": null,
     "name": "Minigame Collection"
   },
   {
-    "deck": "The \"Massively Multiplayer Online Role-Playing Game\" genre typically allows hundres of players to commune in the same space for social events as well as combat. Many of these games require players to pay a regular fee for continued access.",
     "name": "MMORPG"
   },
   {
-    "deck": "Multiplayer Online Battle Arena",
     "name": "MOBA"
   },
   {
-    "deck": null,
     "name": "Music/Rhythm"
   },
   {
-    "deck": null,
     "name": "Pinball"
   },
   {
-    "deck": null,
     "name": "Platformer"
   },
   {
-    "deck": null,
     "name": "Puzzle"
   },
   {
-    "deck": null,
     "name": "Real-Time Strategy"
   },
   {
-    "deck": null,
     "name": "Role-Playing"
   },
   {
-    "deck": "Though it's a less-than-ideal name, the Shoot 'Em Up genre applies to a wide variety of arcade style games involving shooting, such as Gradius, Gun.Smoke, Commando, Moon Cresta, Galaxian, and more.",
     "name": "Shoot 'Em Up"
   },
   {
-    "deck": "Shooter is a genre that serves as a top-level catch-all for games that primarily feature shooting but don't break out into first-person, light-gun, or other shooting sub-genres.",
     "name": "Shooter"
   },
   {
-    "deck": null,
     "name": "Simulation"
   },
   {
-    "deck": null,
     "name": "Skateboarding"
   },
   {
-    "deck": null,
     "name": "Snowboarding/Skiing"
   },
   {
-    "deck": null,
     "name": "Soccer"
   },
   {
-    "deck": null,
     "name": "Sports"
   },
   {
-    "deck": null,
     "name": "Strategy"
   },
   {
-    "deck": null,
     "name": "Surfing"
   },
   {
-    "deck": null,
     "name": "Tennis"
   },
   {
-    "deck": null,
     "name": "Text Adventure"
   },
   {
-    "deck": null,
     "name": "Track & Field"
   },
   {
-    "deck": null,
     "name": "Trivia/Board Game"
   },
   {
-    "deck": null,
     "name": "Vehicular Combat"
   },
   {
-    "deck": null,
     "name": "Wrestling"
   }
 ]

@@ -1,0 +1,43 @@
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+
+const GameSeeker = () => {
+  const [games, setGames] = useState([]);
+
+  useEffect(() => {
+    // Fetch data from the backend API
+    const fetchGames = async () => {
+      try {
+        console.log('hi');
+        //const response = await axios.get('http://localhost:2225/api/games');
+        const response = await fetch('https://www.giantbomb.com/api/games/?api_key=c7bc6dcc139e582f5447279225852af527a649ae&format=json&field_list=name,description,image,id&sort=original_game_rating:desc');
+        const data = await response.json();
+        console.log('Fetched games:', data);
+        setGames(data.results); // Set the fetched game data to state
+      } catch (error) {
+        console.error('Error fetching game data:', error);
+      }
+    };
+
+    fetchGames();
+  }, []);
+
+  return (
+    <div>
+      <h1>Top Games</h1>
+      {games.length > 0 ? (
+        games.map((game) => (
+          <div key={game.id}> {/* Use the 'name' or a unique property */}
+            <h2>{game.name}</h2>
+            <p>{game.description}</p>
+            <img src={game.image?.medium_url || 'https://via.placeholder.com/400'} alt={game.name} />
+          </div>
+        ))
+      ) : (
+        <p>Loading games...</p>
+      )}
+    </div>
+  );
+};
+
+export default GameSeeker;
