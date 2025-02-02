@@ -14,6 +14,7 @@ const App = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [games, setGames] = useState([]); // State to store game data
     const [query, setQuery] = useState(''); // State to hold the search query
+    const [displayLimit, setDisplayLimit] = useState(10);
 
 
     const handleSearch = (query) => {
@@ -103,16 +104,18 @@ const App = () => {
             <div className='GameContainer'>
               <h1>Top Games</h1>
               {filteredGames.length > 0 ? (
-                filteredGames.map((game) => (
+                filteredGames.slice(0, displayLimit).map((game) => (
                   <div key={game.id} className='GameCard'>
                     <h2>{game.name}</h2>
                     <p>{game.deck}</p>
-                    <img src={game.image?.thumb_url || 'https://via.placeholder.com/400'} alt={game.name} />
+                    <img className='Img' src={game.image?.thumb_url || 'https://via.placeholder.com/400'} alt={game.name} />
                   </div>
                 ))
               ) : (
                 <p>No Games</p>
               )}
+              {/* Button to load more games */}
+              <button onClick={() => setDisplayLimit(displayLimit + 10)}>Show More</button>
             </div>
           
             {/* Filter component */}
