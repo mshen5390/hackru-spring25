@@ -43,7 +43,7 @@ function Filter() {
           RPG
         </label>
         {/* Display selected filters */}
-      <div>
+      <div >
           <p>Selected Filters:</p>
             <ul>
             {selectedFilters.map((filter, index) => (

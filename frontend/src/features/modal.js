@@ -1,15 +1,24 @@
-
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 function Modal({ isOpen, onClose, genres, onSelectFilters }) {
-  //const [genres, setGenres] = useState([]);
-
-  
+  const [selectedFilters, setSelectedFilters] = useState([]);
 
   if (!isOpen) return null;
 
-  const handleChange = (event) => {
+  const handleCheckboxChange = (event) => {
     const { value, checked } = event.target;
+
+    if (checked) {
+      // Add the filter to the selected filters
+      setSelectedFilters((prevFilters) => [...prevFilters, value]);
+    } else {
+      // Remove the filter from the selected filters
+      setSelectedFilters((prevFilters) =>
+        prevFilters.filter((filter) => filter !== value)
+      );
+    }
+
+    // Update selected filters in the parent component
     onSelectFilters(value, checked);
   };
 
@@ -25,7 +34,7 @@ function Modal({ isOpen, onClose, genres, onSelectFilters }) {
     alignItems: 'center',
     zIndex: 1000,
   };
-  
+
   const modalContentStyles = {
     backgroundColor: 'white',
     padding: '20px',
@@ -35,7 +44,6 @@ function Modal({ isOpen, onClose, genres, onSelectFilters }) {
   };
 
   return (
-    
     <div style={modalStyles}>
       <div style={modalContentStyles}>
         <h2>Select Filters</h2>
@@ -47,7 +55,7 @@ function Modal({ isOpen, onClose, genres, onSelectFilters }) {
                   <input
                     type="checkbox"
                     value={genre.name}
-                    onChange={handleChange} // Update selected genres on change
+                    onChange={handleCheckboxChange} // Update selected genres on change
                   />
                   {genre.name} {/* Display genre name next to checkbox */}
                 </label>
@@ -62,7 +70,5 @@ function Modal({ isOpen, onClose, genres, onSelectFilters }) {
     </div>
   );
 }
-
-
 
 export default Modal;
