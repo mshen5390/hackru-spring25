@@ -5,7 +5,7 @@ import SearchBar from "./features/searchBar";
 import "./searchBar.css";
 import Modal from "./features/modal";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import HomeButton from './homeButton';  // Import your home page component
+import HomeButton from './features/homeButton';  // Import your home page component
 
 const App = () => {
     const [selectedGenres, setSelectedGenres] = useState([]);
@@ -52,7 +52,7 @@ const App = () => {
             <HomeButton />
             {/* Routes */}
             <Routes>
-              <Route path="/" element={<HomePage />} />
+              <Route path="/" element={<HomeButton />} />
             </Routes>
 
             {/* Search bar */}
