@@ -28,3 +28,55 @@
     left: 0;                   
     z-index: 1000;
 }
+
+.Img{
+    
+}
+
+.Filter{
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    padding: 10px 20px;
+    border: 2px solid gray;
+    border-radius: 7px;
+    
+    top: 55px;
+    left: 890px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.GameContainer {
+    position: relative;
+    border: 2px solid #333;
+    padding: 20px;
+    width: 70%;
+    margin: 20px auto;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    top: 70px;
+  }
+  
+  .GameContainer h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .GameCard {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin: 10px 0;
+    background-color: #fff;
+    border-radius: 6px;
+  }
+  
+  .GameCard img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    display: block;
+    margin: 10px 0;
+  }
