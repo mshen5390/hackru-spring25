@@ -14,6 +14,7 @@ function Modal({ isOpen, onClose, genre, onSelectFilters }) {
   };
 
   return (
+    
     <div style={modalStyles}>
       <div style={modalContentStyles}>
         <h2>Select Filters</h2>
@@ -25,9 +26,9 @@ function Modal({ isOpen, onClose, genre, onSelectFilters }) {
                   <input
                     type="checkbox"
                     value={genre.name}
-                    onChange={handleChange} // Update the selected genres on change
+                    onChange={handleChange} // Update selected genres on change
                   />
-                  {genre.name} {/* Display the genre name next to the checkbox */}
+                  {genre.name} {/* Display genre name next to checkbox */}
                 </label>
               </div>
             ))

@@ -44,7 +44,7 @@ const App = () => {
 
     useEffect(() => {
       if (isModalOpen) {
-        fetch('/genres.json') // Ensure genres.json is in the public folder
+        fetch('/backend/genres.json') // Ensure genres.json is in the public folder
           .then((response) => response.json())
           .then((data) => {
             setGenres(data); // Set genres to state when fetched
@@ -105,7 +105,7 @@ const App = () => {
                   </div>
                 ))
               ) : (
-                <p>Loading games...</p>
+                <p>No Games</p>
               )}
             </div>
           
