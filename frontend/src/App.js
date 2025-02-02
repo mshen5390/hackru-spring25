@@ -25,57 +25,35 @@ const App = () => {
         console.log("Searching for:", query);
     };
 
-    // // Fetch genres from the API
-    // useEffect(() => {
-    //   const fetchGenres = async () => {
-    //     try {
-    //       const response = await fetch('https://api.igdb.com/v4/genres/?fields=*&name=*');
-    //       const data = await response.json();
-    //       const genreNames = data.map((genre) => genre.name); // Extract only the name
-    //       setGenres(genreNames);
-    //     } catch (error) {
-    //       console.error('Error fetching genres:', error);
-    //     }
-    //   };
+ 
+    
+    useEffect(() => {
+      const fetchGames = async () => {
+        try {
+          const response = await fetch('http://localhost:2225/api/games'); // Request to serverless function
+          const data = await response.json();
+          console.log('Full API Response:', response.data);
+          setGames(data);
+        } catch (error) {
+          console.error('Error fetching game data:', error);
+        }
+      };
   
-    //   fetchGenres();
-    // }, []);
+      fetchGames();
+    }, []);
 
-    // useEffect(() => {
-    //     const fetchData = async () => {
-    //       try {
-            
-    //         const data = await fetchGames(); // Call the fetchGames function
-    //         console.log(data);
-    //         setGames(data); // Set the fetched game data to state
-    //         setLoading(false); // Stop loading
-    //       } catch (error) {
-    //         setError('Failed to fetch game data'); // Set error message if fetching fails
-    //         setLoading(false); // Stop loading
-    //       }
-    //     };
-  
-    //     fetchData();
-    //   }, []); // Only run once when the component mounts
-  
-
-    
-      
-    
-      useEffect(() => {
-        const fetchGames = async () => {
-          try {
-            const response = await fetch('http://localhost:2225/api/games'); // Request to serverless function
-            const data = await response.json();
-            console.log('Full API Response:', response.data);
-            setGames(data);
-          } catch (error) {
-            console.error('Error fetching game data:', error);
-          }
-        };
-    
-        fetchGames();
-      }, []);
+    useEffect(() => {
+      if (isModalOpen) {
+        fetch('/genres.json') // Ensure genres.json is in the public folder
+          .then((response) => response.json())
+          .then((data) => {
+            setGenres(data); // Set genres to state when fetched
+          })
+          .catch((error) => {
+            console.error('Error fetching genres:', error);
+          });
+      }
+    }, [isModalOpen]);
 
     const openModal = () => setIsModalOpen(true);
     //console.log('hi');
@@ -89,7 +67,7 @@ const App = () => {
         }
     };
     const filteredGames = games.filter((game) => 
-        game.name.toLowerCase().includes(query.toLowerCase()) // Check if game name matches the query
+        game.name.toLowerCase().startsWith(query.toLowerCase()) // Check if game name matches the query
     );
 
     return (
@@ -110,18 +88,17 @@ const App = () => {
             {/* Filter button and Modal */}
             <button onClick={openModal}>Show Genres</button>
             <Modal
-                isOpen={isModalOpen}
-                onClose={closeModal}
-                genres={genres}
-                onSelectFilters={handleSelectFilters}
+              isOpen={isModalOpen}
+              onClose={closeModal}
+              genres={genres} // Pass fetched genres as props
+              onSelectFilters={handleSelectFilters}  // Pass filter handler
             />
-
             {/* Display Games */}
             <div>
               <h1>Top Games</h1>
-              {games.length > 0 ? (
-                games.map((game, index) => (
-                  <div key={index}>
+              {filteredGames.length > 0 ? (
+                filteredGames.map((game) => (
+                  <div key={game.id}>
                     <h2>{game.name}</h2>
                     <p>{game.deck}</p>
                     <img src={game.image?.medium_url || 'https://via.placeholder.com/400'} alt={game.name} />
@@ -137,12 +114,12 @@ const App = () => {
             
             {/* Display selected genres */}
             <div>
-                <h2>Selected Genres:</h2>
-                <ul>
-                    {selectedGenres.map((genre) => (
-                        <li key={genre}>{genre}</li>
-                    ))}
-                </ul>
+              <h2>Selected Genres:</h2>
+              <ul>
+                {selectedGenres.map((genre) => (
+                  <li key={genre}>{genre}</li>
+                ))}
+              </ul>
             </div>
         </div>
       </Router>

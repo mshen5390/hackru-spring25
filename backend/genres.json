@@ -1,152 +1,202 @@
 [
   {
+    "id": 1,
     "name": "Action"
   },
   {
+    "id": 43,
     "name": "Action-Adventure"
   },
   {
+    "id": 4,
     "name": "Adventure"
   },
   {
+    "id": 34,
     "name": "Baseball"
   },
   {
+    "id": 22,
     "name": "Basketball"
   },
   {
+    "id": 26,
     "name": "Billiards"
   },
   {
+    "id": 45,
     "name": "Block-Breaking"
   },
   {
+    "id": 29,
     "name": "Bowling"
   },
   {
+    "id": 20,
     "name": "Boxing"
   },
   {
+    "id": 37,
     "name": "Brawler"
   },
   {
+    "id": 13,
     "name": "Card Game"
   },
   {
+    "id": 15,
     "name": "Compilation"
   },
   {
+    "id": 46,
     "name": "Cricket"
   },
   {
+    "id": 6,
     "name": "Driving/Racing"
   },
   {
+    "id": 31,
     "name": "Dual-Joystick Shooter"
   },
   {
+    "id": 8,
     "name": "Educational"
   },
   {
+    "id": 9,
     "name": "Fighting"
   },
   {
+    "id": 32,
     "name": "First-Person Shooter"
   },
   {
+    "id": 27,
     "name": "Fishing"
   },
   {
+    "id": 44,
     "name": "Fitness"
   },
   {
+    "id": 24,
     "name": "Flight Simulator"
   },
   {
+    "id": 21,
     "name": "Football"
   },
   {
+    "id": 49,
     "name": "Gambling"
   },
   {
+    "id": 28,
     "name": "Golf"
   },
   {
+    "id": 39,
     "name": "Hockey"
   },
   {
+    "id": 35,
     "name": "Light-Gun Shooter"
   },
   {
+    "id": 17,
     "name": "Minigame Collection"
   },
   {
+    "id": 16,
     "name": "MMORPG"
   },
   {
+    "id": 50,
     "name": "MOBA"
   },
   {
+    "id": 19,
     "name": "Music/Rhythm"
   },
   {
+    "id": 30,
     "name": "Pinball"
   },
   {
+    "id": 41,
     "name": "Platformer"
   },
   {
+    "id": 18,
     "name": "Puzzle"
   },
   {
+    "id": 12,
     "name": "Real-Time Strategy"
   },
   {
+    "id": 5,
     "name": "Role-Playing"
   },
   {
+    "id": 48,
     "name": "Shoot 'Em Up"
   },
   {
+    "id": 11,
     "name": "Shooter"
   },
   {
+    "id": 7,
     "name": "Simulation"
   },
   {
+    "id": 23,
     "name": "Skateboarding"
   },
   {
+    "id": 33,
     "name": "Snowboarding/Skiing"
   },
   {
+    "id": 40,
     "name": "Soccer"
   },
   {
+    "id": 3,
     "name": "Sports"
   },
   {
+    "id": 2,
     "name": "Strategy"
   },
   {
+    "id": 47,
     "name": "Surfing"
   },
   {
+    "id": 25,
     "name": "Tennis"
   },
   {
+    "id": 36,
     "name": "Text Adventure"
   },
   {
+    "id": 42,
     "name": "Track & Field"
   },
   {
+    "id": 14,
     "name": "Trivia/Board Game"
   },
   {
+    "id": 38,
     "name": "Vehicular Combat"
   },
   {
+    "id": 10,
     "name": "Wrestling"
   }
 ]

@@ -13,7 +13,7 @@ const getGenres = async (genres) => {
       params: {
         api_key: api_key,
         format: 'json',
-        field_list: 'name',
+        field_list: 'name,id',
         
         //query: 'name',
       },

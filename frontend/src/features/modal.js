@@ -1,6 +1,11 @@
-import React from 'react';
 
-function Modal({ isOpen, onClose, genres, onSelectFilters }) {
+import React, { useState, useEffect } from "react";
+
+function Modal({ isOpen, onClose, genre, onSelectFilters }) {
+  const [genres, setGenres] = useState([]);
+
+  
+
   if (!isOpen) return null;
 
   const handleChange = (event) => {
@@ -13,18 +18,24 @@ function Modal({ isOpen, onClose, genres, onSelectFilters }) {
       <div style={modalContentStyles}>
         <h2>Select Filters</h2>
         <div>
-          {genres.map((genre) => (
-            <label key={genre}>
-              <input
-                type="checkbox"
-                value={genre}
-                onChange={handleChange}
-              />
-              {genre}
-            </label>
-          ))}
+          {genres.length > 0 ? (
+            genres.map((genre) => (
+              <div key={genre.id}>
+                <label>
+                  <input
+                    type="checkbox"
+                    value={genre.name}
+                    onChange={handleChange} // Update the selected genres on change
+                  />
+                  {genre.name} {/* Display the genre name next to the checkbox */}
+                </label>
+              </div>
+            ))
+          ) : (
+            <p>No Filters</p> // If no genres, display a message
+          )}
         </div>
-        <button onClick={onClose}>Close</button>
+        <button onClick={onClose}>Close</button> {/* Close the modal */}
       </div>
     </div>
   );
