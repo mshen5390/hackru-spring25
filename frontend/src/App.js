@@ -4,6 +4,8 @@ import React, { useState, useEffect } from "react";
 import SearchBar from "./features/searchBar";
 import "./searchBar.css";
 import Modal from "./features/modal";
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import HomeButton from './homeButton';  // Import your home page component
 
 const App = () => {
     const [selectedGenres, setSelectedGenres] = useState([]);
@@ -42,9 +44,17 @@ const App = () => {
     };
 
     return (
+      <Router>
         <div>
             <h1>Game Search Engine</h1>
             
+            {/* Home button */}
+            <HomeButton />
+            {/* Routes */}
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+            </Routes>
+
             {/* Search bar */}
             <SearchBar onSearch={handleSearch} />
             
@@ -70,6 +80,7 @@ const App = () => {
                 </ul>
             </div>
         </div>
+      </Router>
     );
 };
 
