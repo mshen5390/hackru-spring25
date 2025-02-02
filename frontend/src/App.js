@@ -102,11 +102,11 @@ const App = () => {
               onSelectFilters={handleSelectFilters}  // Pass filter handler
             />
             {/* Display Games */}
-            <div>
+            <div className='GameContainer'>
               <h1>Top Games</h1>
               {filteredGames.length > 0 ? (
                 filteredGames.map((game) => (
-                  <div key={game.id}>
+                  <div key={game.id} className='GameCard'>
                     <h2>{game.name}</h2>
                     <p>{game.deck}</p>
                     <img src={game.image?.thumb_url || 'https://via.placeholder.com/400'} alt={game.name} />
@@ -121,8 +121,8 @@ const App = () => {
             <Filter selectedGenres={selectedGenres} setSelectedGenres={setSelectedGenres} />
             
             {/* Display selected genres */}
-            <div>
-              <h2>Selected Genres:</h2>
+            <div className='Filter'>
+              <h2>Filter:</h2>
               <ul>
                 {selectedGenres.map((genre) => (
                   <li key={genre}>{genre}</li>
