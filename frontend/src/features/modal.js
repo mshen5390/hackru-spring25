@@ -33,21 +33,33 @@ function Modal({ isOpen, onClose, genres, onSelectFilters }) {
     justifyContent: 'center',
     alignItems: 'center',
     zIndex: 1000,
-  };
+};
 
-  const modalContentStyles = {
+const modalContentStyles = {
+    display: 'flex',
+    flexDirection: 'column', // Stack close button on top, filters below
     backgroundColor: 'white',
     padding: '20px',
-    borderRadius: '5px',
-    width: '300px',
+    borderRadius: '8px',
+    width: '80%', // Adjust width for a better layout
+    maxWidth: '700px', // Prevents it from being too wide
     textAlign: 'center',
-  };
+};
+
+const filtersContainerStyles = {
+    display: 'grid',
+    gridTemplateColumns: 'repeat(5, 1fr)', // 5 columns
+    gap: '10px',
+    marginTop: '10px', // Spacing between close button and filters
+    marginBottom: '20px',
+};
+
 
   return (
     <div style={modalStyles}>
       <div style={modalContentStyles}>
         <h2>Select Filters</h2>
-        <div>
+        <div style={filtersContainerStyles}>
           {genres.length > 0 ? (
             genres.map((genre) => (
               <div key={genre.id}>
