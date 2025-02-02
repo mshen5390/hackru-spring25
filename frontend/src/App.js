@@ -7,8 +7,6 @@ import Modal from "./features/modal";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import HomeButton from './features/homeButton';  // Import your home page component
 import './features.css';
-import fetchGames from './searchList/list';
-import gameCard from './searchList/gameCard';
 
 const App = () => {
     const [selectedGenres, setSelectedGenres] = useState([]);
@@ -16,8 +14,6 @@ const App = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [games, setGames] = useState([]); // State to store game data
     const [query, setQuery] = useState(''); // State to hold the search query
-    const [loading, setLoading] = useState(true); // Loading state
-    const [error, setError] = useState(null); // Error handling state
 
 
     const handleSearch = (query) => {
