@@ -1,31 +1,3 @@
-
-//http://www.giantbomb.com/api/genres/?api_key=c7bc6dcc139e582f5447279225852af527a649ae]&format=json&field_list=name,deck
-//const GB_URL = 'http://www.giantbomb.com/api/genres/?api_key=c7bc6dcc139e582f5447279225852af527a649ae&format=json&field_list=name';
-
-// const fetchGenres = async () => {
-//   try {
-//     const response = await axios.post(
-//       GB_URL,
-//       'fields name, category;',
-//       {
-//         headers: {
-//           'Client-ID': CLIENT_ID,
-//           Authorization: `Bearer ${ACCESS_TOKEN}`,
-//         },
-//       }
-//     );
-
-//     const genres = response.data;
-
-//     fs.writeFileSync('genres.json', JSON.stringify(genres, null, 2));
-
-//     console.log('Genres saved to genres.json');
-//   } catch (error) {
-//     console.error('Error fetching genres:', error.message);
-//   }
-// };
-
-
 // fetchGenres;
 const axios = require('axios');
 const fs = require('fs');
@@ -52,7 +24,7 @@ const getGenres = async (genres) => {
     );
     fs.writeFileSync('genres.json', JSON.stringify(response.data.results, null, 2));
 
-    console.log('Genres saved to genres.json');
+    //console.log('Genres saved to genres.json');
   } catch (error) {
     console.error('Error fetching data from Giant Bomb API:', error);
   }
