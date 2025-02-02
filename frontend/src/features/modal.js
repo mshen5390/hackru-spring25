@@ -1,25 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 
-function Modal({ isOpen, onClose, genres, onSelectFilters }) {
-  const [selectedFilters, setSelectedFilters] = useState([]);
-
+function Modal({ isOpen, onClose, genres, onSelectFilters, selectedGenres }) {
   if (!isOpen) return null;
 
   const handleCheckboxChange = (event) => {
     const { value, checked } = event.target;
-
-    if (checked) {
-      // Add the filter to the selected filters
-      setSelectedFilters((prevFilters) => [...prevFilters, value]);
-    } else {
-      // Remove the filter from the selected filters
-      setSelectedFilters((prevFilters) =>
-        prevFilters.filter((filter) => filter !== value)
-      );
-    }
-
-    // Update selected filters in the parent component
-    onSelectFilters(value, checked);
+    onSelectFilters(value, checked); // Update selected filters in the parent
   };
 
   const modalStyles = {
@@ -33,27 +19,26 @@ function Modal({ isOpen, onClose, genres, onSelectFilters }) {
     justifyContent: 'center',
     alignItems: 'center',
     zIndex: 1000,
-};
+  };
 
-const modalContentStyles = {
+  const modalContentStyles = {
     display: 'flex',
-    flexDirection: 'column', // Stack close button on top, filters below
+    flexDirection: 'column',
     backgroundColor: 'white',
     padding: '20px',
     borderRadius: '8px',
-    width: '80%', // Adjust width for a better layout
-    maxWidth: '700px', // Prevents it from being too wide
+    width: '80%',
+    maxWidth: '700px',
     textAlign: 'center',
-};
+  };
 
-const filtersContainerStyles = {
+  const filtersContainerStyles = {
     display: 'grid',
-    gridTemplateColumns: 'repeat(5, 1fr)', // 5 columns
+    gridTemplateColumns: 'repeat(5, 1fr)',
     gap: '10px',
-    marginTop: '10px', // Spacing between close button and filters
+    marginTop: '10px',
     marginBottom: '20px',
-};
-
+  };
 
   return (
     <div style={modalStyles}>
@@ -67,17 +52,18 @@ const filtersContainerStyles = {
                   <input
                     type="checkbox"
                     value={genre.name}
-                    onChange={handleCheckboxChange} // Update selected genres on change
+                    onChange={handleCheckboxChange}
+                    checked={selectedGenres.includes(genre.name)} // Keep checkbox state synced
                   />
-                  {genre.name} {/* Display genre name next to checkbox */}
+                  {genre.name}
                 </label>
               </div>
             ))
           ) : (
-            <p>No Filters</p> // If no genres, display a message
+            <p>No Filters</p>
           )}
         </div>
-        <button onClick={onClose}>Close</button> {/* Close the modal */}
+        <button onClick={onClose}>Close</button>
       </div>
     </div>
   );
