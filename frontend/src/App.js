@@ -6,13 +6,11 @@ import "./searchBar.css";
 import Modal from "./features/modal";
 
 const App = () => {
-    const [searchQuery, setSearchQuery] = useState("");
     const [selectedGenres, setSelectedGenres] = useState([]);
     const [genres, setGenres] = useState([]);
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     const handleSearch = (query) => {
-        setSearchQuery(query);
         console.log("Searching for:", query);
     };
 
@@ -49,7 +47,6 @@ const App = () => {
             
             {/* Search bar */}
             <SearchBar onSearch={handleSearch} />
-            <p>Search term: {searchQuery}</p>
             
             {/* Filter button and Modal */}
             <button onClick={openModal}>Show Genres</button>
