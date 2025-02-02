@@ -94,7 +94,7 @@ const App = () => {
             <SearchBar onSearch={handleSearch} />
             
             {/* Filter button and Modal */}
-            <button onClick={openModal}>Show Genres</button>
+            <button onClick={openModal} className='Filter'>Filter</button>
             <Modal
               isOpen={isModalOpen}
               onClose={closeModal}
@@ -121,8 +121,8 @@ const App = () => {
             <Filter selectedGenres={selectedGenres} setSelectedGenres={setSelectedGenres} />
             
             {/* Display selected genres */}
-            <div className='Filter'>
-              <h2>Filter:</h2>
+            <div>
+              <h2>Selected Tags</h2>
               <ul>
                 {selectedGenres.map((genre) => (
                   <li key={genre}>{genre}</li>
