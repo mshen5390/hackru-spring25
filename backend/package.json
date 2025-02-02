@@ -1,67 +1,46 @@
 {
-  
-
-  "name": "backend",
-  
-
-  "version": "1.0.0",
-  
-
-  "main": "index.js",
-  
-
-  "scripts": {
-  
-
-    
-
-  "devStart": "nodemon server.js"
-  
-
-  },
-  
-
-  "author": "",
-  
-
-  "license": "ISC",
-  
-
-  "description": "",
-  
-
-  "dependencies": {
-  
-
-    
-
-  "axios": "^1.7.9",
-  
-
-    
-
-  "dotenv": "^16.4.7",
-  
-
-    
-
-  "express": "^4.21.2",
-  
-
-    
-
-  "fs": "^0.0.1-security",
-  
-
-    
-
-  "mongodb": "^6.13.0",
-  
-
-    
-
-  "mongoose": "^8.9.6"
-  
-
-  }
+  
+"name": "backend",
+  
+"version": "1.0.0",
+  
+"main": "index.js",
+  
+"scripts": {
+  
+  
+"devStart": "nodemon server.js"
+  
+},
+  
+"author": "",
+  
+"license": "ISC",
+  
+"description": "",
+  
+"dependencies": {
+  
+  
+"apicalypse": "^0.3.1",
+  
+  
+"axios": "^1.7.9",
+  
+  
+"dotenv": "^16.4.7",
+  
+  
+"express": "^4.21.2",
+  
+  
+"fs": "^0.0.1-security",
+  
+  
+"mongodb": "^6.13.0",
+  
+  
+"mongoose": "^8.9.6"
+  
+}
 }
