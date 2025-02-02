@@ -14,7 +14,7 @@ const App = () => {
     const [selectedGenres, setSelectedGenres] = useState([]);
     const [genres, setGenres] = useState([]);
     const [isModalOpen, setIsModalOpen] = useState(false);
-  const [games, setGames] = useState([]); // State to store game data
+    const [games, setGames] = useState([]); // State to store game data
     const [query, setQuery] = useState(''); // State to hold the search query
     const [loading, setLoading] = useState(true); // Loading state
     const [error, setError] = useState(null); // Error handling state
@@ -101,7 +101,7 @@ const App = () => {
                   <div key={game.id}>
                     <h2>{game.name}</h2>
                     <p>{game.deck}</p>
-                    <img src={game.image?.medium_url || 'https://via.placeholder.com/400'} alt={game.name} />
+                    <img src={game.image?.thumb_url || 'https://via.placeholder.com/400'} alt={game.name} />
                   </div>
                 ))
               ) : (
