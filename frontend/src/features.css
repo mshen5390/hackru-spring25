@@ -56,11 +56,11 @@
     width: 10%;
     height: 40%;
     margin: 20px auto;
-    background-color: #f9f9f9;
+    background-color: #dbdbdb;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    top: 70px;
-    left: auto; right: 0;
+    top: 140px;
+    left: auto; right: 12px;
 }
 
 .GameContainer {
