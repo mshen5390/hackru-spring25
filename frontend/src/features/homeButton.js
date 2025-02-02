@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router-dom';
+import '../features.css';
 
 const HomeButton = () => {
     const navigate = useNavigate();
@@ -7,7 +8,7 @@ const HomeButton = () => {
         navigate('/');
     };
 
-    const buttonStyle = {
+    /*const buttonStyle = {
         backgroundColor: '#4CAF50',
         color: 'white',
         padding: '10px 20px',
@@ -22,11 +23,11 @@ const HomeButton = () => {
         display: 'flex',
         justifyContent: 'center',
         marginTop: '20px'
-    };
-    
+    };*/
+
     return (
-        <div style={buttonContainerStyle}>
-            <button style={buttonStyle} onClick={handleHomeClick}>Go to Home</button>
+        <div>
+            <button className='Home' onClick={handleHomeClick}>Home</button>
         </div>
     );
 };

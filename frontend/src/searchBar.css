@@ -1,7 +1,10 @@
 .search-container {
-    position: relative;
+    position:relative;
+    justify-self: center;
+    text-align: center;
     width: 300px;
-    margin: 20px auto;
+    top: 100px;
+    
 }
 
 .search-input {

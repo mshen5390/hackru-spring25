@@ -6,6 +6,7 @@ import "./searchBar.css";
 import Modal from "./features/modal";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import HomeButton from './features/homeButton';  // Import your home page component
+import './features.css';
 
 const App = () => {
     const [selectedGenres, setSelectedGenres] = useState([]);
@@ -46,14 +47,14 @@ const App = () => {
     return (
       <Router>
         <div>
-            <h1>Game Search Engine</h1>
+            <h1 className='Title'>GameSeek</h1>
             
-            {/* Home button */}
-            <HomeButton />
             {/* Routes */}
-            <Routes>
-              <Route path="/" element={<HomeButton />} />
-            </Routes>
+            <div className='TopBar'>
+              <Routes>
+                <Route path="/" element={<HomeButton />} />
+              </Routes>
+            </div>
 
             {/* Search bar */}
             <SearchBar onSearch={handleSearch} />
