@@ -107,8 +107,10 @@ const App = () => {
                 filteredGames.slice(0, displayLimit).map((game) => (
                   <div key={game.id} className='GameCard'>
                     <h2>{game.name}</h2>
-                      <img className='Img' src={game.image?.thumb_url || 'https://via.placeholder.com/400'} alt={game.name} />
-                      <p>{game.deck}</p>
+                      <div className='Description'>
+                        <img className='Img' src={game.image?.thumb_url || 'https://via.placeholder.com/400'} alt={game.name} />
+                        <p>{game.deck}</p>
+                      </div>
                   </div>
                 ))
               ) : (

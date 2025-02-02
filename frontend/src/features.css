@@ -69,13 +69,25 @@
   
   .GameCard {
     display: flex;
-    
+    flex-direction: column;
+    align-items: flex-start;
     border: 1px solid #ccc;
     padding: 15px;
     margin: 10px 0;
     background-color: #fff;
     border-radius: 6px;
   }
+  .GameCard h2{
+    margin-bottom: 10px;
+  }
+  .GameCard p {
+    margin-left: 10px;           
+    align-self: flex-start; 
+  }
+  .Description{
+    display: flex;
+    flex-direction: row;
+}
   
   .GameCard img {
     width: 100%;
